@@ -75,7 +75,7 @@ class Broadcast extends Component {
     });
 
     // save result to server if data is higher than 60%
-    this.saveToServer(result);
+    // this.saveToServer(result);
 
     this.setState({
       percent_match: result.percent_match,
@@ -85,13 +85,13 @@ class Broadcast extends Component {
     });
   }
 
-  saveToServer = async (data) => {
-    // only save result that are higher than 60%
-    if (data.percent_match >= 60) {
-      const url = 'https://angular5-91f56.firebaseio.com/data';
-      await axios.post(url, data);
-    }
-  }
+  // saveToServer = async (data) => {
+  //   // only save result that are higher than 60%
+  //   if (data.percent_match >= 60) {
+  //     const url = 'https://angular5-91f56.firebaseio.com/data';
+  //     await axios.post(url, data);
+  //   }
+  // }
 
   sendDataToBeAnalyzed = async (imgBase64) => {
     const url = `https://www.headlightlabs.com/api/gcpd_lookup?api_key=${process.env.REACT_APP_HEADLIGHT_API}`;
