@@ -14,6 +14,7 @@ class Broadcast extends Component {
     percent_match: null,
     closest_match: null,
     result: null,
+    img: null,
   }
 
   componentDidMount() {
@@ -134,6 +135,7 @@ class Broadcast extends Component {
                   closest_match={this.state.closest_match}
                   location={this.state.picture}
                   result={this.state.result}
+                  img={this.state.img}
                 />
               </Segment>
             }
