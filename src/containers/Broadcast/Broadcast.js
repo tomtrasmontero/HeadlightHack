@@ -95,7 +95,7 @@ class Broadcast extends Component {
   // }
 
   sendDataToBeAnalyzed = async (imgBase64) => {
-    const url = `https://www.headlightlabs.com/api/gcpd_lookup?api_key=${process.env.REACT_APP_HEADLIGHT_API}`;
+    const url = 'https://www.headlightlabs.com/api/gcpd_lookup?api_key=vS4FerNkjCJujxb_QqTN1w';
     const body = {
       image_contents: imgBase64,
     };
