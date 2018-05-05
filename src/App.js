@@ -7,6 +7,7 @@ import Aux from './hoc/Aux/Aux';
 import Home from './containers/Home/Home';
 import MenuBar from './components/MenuBar/MenuBar';
 import Broadcast from './containers/Broadcast/Broadcast';
+import WantedLists from './containers/WantedLists/WantedLists';
 
 class App extends Component {
   componentWillMount() {
@@ -18,7 +19,7 @@ class App extends Component {
       <Switch>
         <Route path="/home" exact component={Home} />
         <Route path="/guardian" component={Broadcast} />
-        {/* <Route path="/images" exact component={BroadcastList} /> */}
+        <Route path="/images" exact component={WantedLists} />
         <Redirect to="/home" />
       </Switch>
     );
