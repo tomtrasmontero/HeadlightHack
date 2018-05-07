@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Container, Segment, Header, Icon, Grid } from 'semantic-ui-react';
 
+import Classes from './WantedLists.scss';
 import WantedPoster from '../../components/WantedPoster/WantedPoster';
 
 class WantedLists extends Component {
@@ -35,7 +36,7 @@ class WantedLists extends Component {
     }
 
     return (
-      <Container>
+      <div className={Classes.WantedLists}>
         <Segment>
           <Header textAlign="center" icon>
             <Icon name="spy" />
@@ -44,15 +45,15 @@ class WantedLists extends Component {
               List of suspected individuals captured by Silent Guardian
             </Header.Subheader>
           </Header>
-          <Container>
+          <Container fluid>
             <Grid>
-              <Grid.Row>
+              <Grid.Row >
                 { list }
               </Grid.Row>
             </Grid>
           </Container>
         </Segment>
-      </Container>
+      </div>
     );
   }
 }

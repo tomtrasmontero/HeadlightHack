@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, Image } from 'semantic-ui-react';
+import { Card, Image, Button } from 'semantic-ui-react';
 import Classes from './WantedPoster.scss';
 
 const WantedPoster = props => (
@@ -12,7 +12,10 @@ const WantedPoster = props => (
       {/* <Card.Description>Closest match</Card.Description> */}
     </Card.Content>
     <Card.Content extra>
-      <button>Report</button>
+      <Button
+        color="red"
+      >Report
+      </Button>
     </Card.Content>
   </Card>
 );

@@ -76,7 +76,7 @@ class Broadcast extends Component {
 
     console.log(result, 'data');
     // save result to server if data is higher than 60%
-    // this.saveToServer(result);
+    this.saveToServer(result);
 
     this.setState({
       percent_match: result.percent_match,
@@ -129,15 +129,17 @@ class Broadcast extends Component {
             { this.state.result === null ?
               null
               :
-              <Segment>
-                <Result
-                  percent_match={this.state.percent_match}
-                  closest_match={this.state.closest_match}
-                  location={this.state.picture}
-                  result={this.state.result}
-                  img={this.state.img}
-                />
-              </Segment>
+              <Grid.Column mobile={16}>
+                <Segment raised>
+                  <Result
+                    percent_match={this.state.percent_match}
+                    closest_match={this.state.closest_match}
+                    location={this.state.picture}
+                    result={this.state.result}
+                    img={this.state.img}
+                  />
+                </Segment>
+              </Grid.Column>
             }
 
             <Divider horizontal>Command Central</Divider>
