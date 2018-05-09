@@ -27,7 +27,7 @@ class WantedLists extends Component {
     let list = <div>Silent Guardian has not detected any bad guys!</div>;
     if (this.state.wantedList.length) {
       list = this.state.wantedList.map(ele => (
-        <Grid.Column key={ele[0]} computer={8} mobile={16}>
+        <Grid.Column key={ele[0]} computer={6} mobile={16}>
           <WantedPoster
             {...ele[1]}
           />
@@ -42,12 +42,12 @@ class WantedLists extends Component {
             <Icon name="spy" />
             Wanted List
             <Header.Subheader>
-              List of suspected individuals captured by Silent Guardian
+              List of suspected individuals captured by Silent Guardian. &gt; 60% match!
             </Header.Subheader>
           </Header>
           <Container fluid>
             <Grid>
-              <Grid.Row >
+              <Grid.Row>
                 { list }
               </Grid.Row>
             </Grid>

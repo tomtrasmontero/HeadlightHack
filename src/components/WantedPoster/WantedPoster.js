@@ -5,7 +5,9 @@ import Classes from './WantedPoster.scss';
 
 const WantedPoster = props => (
   <Card fluid color="blue" className={Classes.CardPoster} raised>
-    <Image src={props.location} />
+    <div>
+      <Image src={props.location} />
+    </div>
     <Card.Content>
       <Card.Header>{props.closest_match}</Card.Header>
       <Card.Meta>Percent Match: {props.percent_match}</Card.Meta>

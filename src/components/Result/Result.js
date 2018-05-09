@@ -21,7 +21,7 @@ class Result extends Component {
   render() {
     return (
       <Aux>
-        <Container>
+        <Container textAlign="center">
           <img
             alt="person of interest"
             width="200"
@@ -32,7 +32,7 @@ class Result extends Component {
             {this.props.percent_match} : {this.props.closest_match}
           </p>
           <p>
-            { this.state.reported}
+            { this.state.reported }
           </p>
           <Button
             onClick={() => this.report()}
