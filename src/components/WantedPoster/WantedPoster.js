@@ -4,7 +4,7 @@ import { Card, Image, Button } from 'semantic-ui-react';
 import Classes from './WantedPoster.scss';
 
 const WantedPoster = props => (
-  <Card fluid color="blue" className={Classes.CardPoster} raised>
+  <Card fluid className={Classes.CardPoster} raised>
     <div>
       <Image src={props.location} />
     </div>

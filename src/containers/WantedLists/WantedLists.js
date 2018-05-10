@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Container, Segment, Header, Icon, Grid } from 'semantic-ui-react';
+import { Container, Segment, Header, Icon, Grid, Divider } from 'semantic-ui-react';
 
 import Classes from './WantedLists.scss';
 import WantedPoster from '../../components/WantedPoster/WantedPoster';
@@ -27,7 +27,7 @@ class WantedLists extends Component {
     let list = <div>Silent Guardian has not detected any bad guys!</div>;
     if (this.state.wantedList.length) {
       list = this.state.wantedList.map(ele => (
-        <Grid.Column key={ele[0]} computer={6} mobile={16}>
+        <Grid.Column key={ele[0]} computer={5} mobile={16}>
           <WantedPoster
             {...ele[1]}
           />
@@ -45,8 +45,9 @@ class WantedLists extends Component {
               List of suspected individuals captured by Silent Guardian. &gt; 60% match!
             </Header.Subheader>
           </Header>
+          <Divider />
           <Container fluid>
-            <Grid>
+            <Grid centered>
               <Grid.Row>
                 { list }
               </Grid.Row>
